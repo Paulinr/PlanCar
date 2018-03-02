@@ -1,0 +1,274 @@
+﻿<%@ Master Language="VB" AutoEventWireup="true" CodeBehind="Site.master.vb" Inherits="GestionPlanCar.SiteMaster" %>
+
+<%@ Import Namespace="GestionPlanCar" %>
+<%@ Import Namespace="Microsoft.AspNet.Identity" %>
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> -PLANCAR Application</title>
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="Content/Site.css" rel="stylesheet" />
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+            position: absolute;
+        }
+
+        .auto-style2 {
+            position: relative;
+            color: #FFFFFF;
+            height: 75px;
+        }
+
+        .auto-style3 {
+            width: 100%;
+            text-align: center;
+            height: 57px;
+            background-color: #0033CC;
+            color: #FFFFFF;
+        }
+
+        .auto-style4 {
+            position: relative;
+            text-align: left;
+            width: 20%;
+            height: 441px;
+            background-color: #66FF66;
+        }
+
+        .auto-style5 {
+            padding: 10px;
+            width: 80%;
+            height: 441px;
+            background-color: #FFFF00;
+        }
+
+        body {
+            margin-top: 0px;
+        }
+
+        .glyphicon {
+            margin-right: 10px;
+        }
+
+        .panel-body {
+            padding: 0px;
+        }
+
+            .panel-body table tr td {
+                padding-left: 15px;
+            }
+
+            .panel-body .table {
+                margin-bottom: 0px;
+            }
+
+        .auto-style6 {
+            width: 189px;
+        }
+    </style>
+
+</head>
+<body>
+    <form runat="server">
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style2" colspan="2" style="text-align: center; font-weight: 700; background-color: #0033CC; top: -1px; left: 0px;">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="#">WebSiteName</a>
+                        </div>
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="#">Page 1</a></li>
+                            <li><a href="#">Page 2</a></li>
+                            <li><a href="#">Page 3</a></li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style4">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12">
+                                <div class="panel-group" id="accordion">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-folder-close"></span>Content</a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseOne" class="panel-collapse collapse in">
+                                            <div class="panel-body">
+                                                <table class="table">
+                                                    <tr>
+                                                        <td class="auto-style6">
+                                                            <span class="glyphicon glyphicon-pencil text-primary"></span><a href="http://www.jquery2dotnet.com">Articles</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="auto-style6">
+                                                            <span class="glyphicon glyphicon-flash text-success"></span><a href="http://www.jquery2dotnet.com">News</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="auto-style6">
+                                                            <span class="glyphicon glyphicon-file text-info"></span><a href="http://www.jquery2dotnet.com">Newsletters</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="auto-style6">
+                                                            <span class="glyphicon glyphicon-comment text-success"></span><a href="http://www.jquery2dotnet.com">Comments</a>
+                                                            <span class="badge">42</span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-th"></span>Modules</a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseTwo" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <table class="table">
+                                                    <tr>
+                                                        <td>
+                                                            <a href="http://www.jquery2dotnet.com">Orders</a> <span class="label label-success">$ 320</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="http://www.jquery2dotnet.com">Invoices</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="http://www.jquery2dotnet.com">Shipments</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="http://www.jquery2dotnet.com">Tex</a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><span class="glyphicon glyphicon-user"></span>Account</a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseThree" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <table class="table">
+                                                    <tr>
+                                                        <td>
+                                                            <a href="http://www.jquery2dotnet.com">Change Password</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="http://www.jquery2dotnet.com">Notifications</a> <span class="label label-info">5</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="http://www.jquery2dotnet.com">Import/Export</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span class="glyphicon glyphicon-trash text-danger"></span><a href="http://www.jquery2dotnet.com" class="text-danger">Delete Account</a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour"><span class="glyphicon glyphicon-file"></span>Reports</a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseFour" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <table class="table">
+                                                    <tr>
+                                                        <td>
+                                                            <span class="glyphicon glyphicon-usd"></span><a href="http://www.jquery2dotnet.com">Sales</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span class="glyphicon glyphicon-user"></span><a href="http://www.jquery2dotnet.com">Customers</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span class="glyphicon glyphicon-tasks"></span><a href="http://www.jquery2dotnet.com">Products</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span class="glyphicon glyphicon-shopping-cart"></span><a href="http://www.jquery2dotnet.com">Shopping Cart</a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </td>
+                <td class="auto-style5">
+                    <div style="position: relative; top: -1px; left: 3px;">
+
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+
+                            <p>
+                                corps
+                            </p>
+                            <p>
+                                papa
+                            </p>
+                            <p>
+                                mama
+                            </p>
+                            <p>
+                                enfant
+                            </p>
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style3" colspan="2"><strong>Footer</strong></td>
+            </tr>
+        </table>
+
+    </form>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/jquery-1.10.2.js"></script>
+    <script src="Scripts/modernizr-2.6.2.js"></script>
+    <script src="Scripts/respond.js"></script>
+</body>
+</html>

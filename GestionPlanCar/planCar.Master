@@ -1,0 +1,70 @@
+﻿<%@ Master Language="VB" AutoEventWireup="true" CodeBehind="planCar.master.vb" Inherits="GestionPlanCar.planCar" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            color: #FFFFFF;
+            height: 75px;
+        }
+        .auto-style3 {
+            text-align: center;
+            height: 57px;
+            background-color: #0033CC;
+        }
+        .auto-style4 {
+            text-align: center;
+            width: 275px;
+            height: 441px;
+            background-color: #66FF66;
+        }
+        .auto-style5 {
+            height: 441px;
+            background-color: #FFFF00;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style2" colspan="2" style="text-align: center; font-weight: 700; background-color: #0033CC">Header</td>
+            </tr>
+            <tr>
+                <td class="auto-style4"></td>
+                <td class="auto-style5">
+                    <div style ="position :absolute; top: 101px; left: 290px; width: 695px;">
+
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+           
+                        <p>
+                          corps
+                        </p>
+                        <p>
+                            papa</p>
+                        <p>
+                            mama</p>
+                        <p>
+                            enfant</p>
+                    </asp:ContentPlaceHolder>
+                   </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style3" colspan="2">Footer</td>
+            </tr>
+        </table>
+        
+    
+    </form>
+</body>
+</html>
